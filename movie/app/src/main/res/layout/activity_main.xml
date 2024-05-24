@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/labelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Label:"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"/>
+
+    <EditText
+        android:id="@+id/labelEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelTextView"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@id/labelTextView"
+        android:focusable="true"
+        android:importantForAccessibility="yes"
+        android:inputType="text"
+        android:minWidth="200dp"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time:"
+        android:textSize="18sp"
+        android:layout_below="@id/labelEditText"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentStart="true"/>
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeTextView"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toStartOf="@id/setAlarmButton" />
+
+    <TextView
+        android:id="@+id/daysTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Days:"
+        android:textSize="18sp"
+        android:layout_below="@id/timePicker"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentStart="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/daysTextView"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/day1CheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sun"/>
+
+        <CheckBox
+            android:id="@+id/day2CheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mon"/>
+
+        <CheckBox
+            android:id="@+id/day3CheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tue"/>
+
+        <CheckBox
+            android:id="@+id/day4CheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Wed"/>
+
+        <CheckBox
+            android:id="@+id/day5CheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Thu"/>
+
+        <CheckBox
+            android:id="@+id/day6CheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fri"/>
+
+        <CheckBox
+            android:id="@+id/day7CheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sat"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/setAlarmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Alarm"
+        android:layout_below="@id/day7CheckBox"
+        android:layout_marginTop="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/daysTextView"
+        tools:ignore="NotSibling" />
+
+</RelativeLayout>
+
+
